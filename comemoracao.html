@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comemoracao</title>
+    <title>COMEMORE</title>
 </head>
 <body>
     <div style="text-align: center;">
@@ -12,16 +12,5 @@
             Seu navegador não suporta a reprodução de vídeos.
         </video>
     </div>
-
-    <script>
-        var meuVideo = document.getElementById('meuVideo');
-        meuVideo.addEventListener('ended', function () {
-            // Redirecionar para o número do WhatsApp após o término do vídeo
-            setTimeout(function () {
-                var mensagem = encodeURIComponent("CUZINHO MARCADO: HOJE TEM... NÃO ESQUEÇA O LUBRIFICANTE");
-                window.location.href = 'https://api.whatsapp.com/send?phone=5574981213461&text=' + mensagem;
-            }, 5000); // 5000 milissegundos = 5 segundos
-        });
-    </script>
 </body>
 </html>
