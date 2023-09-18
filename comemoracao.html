@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMEMORACAO</title>
+    <title>Vídeo Local Responsivo</title>
 </head>
 <body>
     <div style="text-align: center;">
-        <video autoplay muted controls width="100%" height="auto">
-            <source src="memebase.mp4" type="video/mp4">
+        <video autoplay muted controls width="100%" height="auto" id="meuVideo">
+            <source src="seu_video.mp4" type="video/mp4">
             Seu navegador não suporta a reprodução de vídeos.
         </video>
     </div>
+
+    <script>
+        var meuVideo = document.getElementById('meuVideo');
+        meuVideo.addEventListener('ended', function () {
+            // Redirecionar para o número do WhatsApp após o término do vídeo
+            setTimeout(function () {
+                window.location.href = 'https://api.whatsapp.com/send?phone=SEU_NUMERO&text=CUZINHO MARCADO:
+                    HOJE TEM... NÃO ESQUECA O LUBRIFICANTE';
+            }, 5000); // 5000 milissegundos = 5 segundos
+        });
+    </script>
 </body>
 </html>
